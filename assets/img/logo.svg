@@ -1,4 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
-<rect x="0" y="0" width="180" height="40" rx="8" fill="#1e3a8a"/>
-<text x="90" y="26" font-family="Poppins, Arial, sans-serif" font-size="18" fill="#FFFFF0" text-anchor="middle" letter-spacing="2">MOSSEWEAR</text>
+  <defs>
+    <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B76E79"/>
+      <stop offset="100%" stop-color="#E6C3C6"/>
+    </linearGradient>
+  </defs>
+  <rect rx="10" ry="10" width="180" height="40" fill="white" />
+  <g font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20">
+    <text x="12" y="26" fill="#1E40AF">mosse</text>
+    <text x="78" y="26" fill="url(#rg)">wear</text>
+  </g>
 </svg>

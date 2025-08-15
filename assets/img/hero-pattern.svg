@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hero pattern">
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="2" fill="#d6a2ac" />
-    </pattern>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9FAFB"/>
+      <stop offset="100%" stop-color="#FFFFF0"/>
+    </linearGradient>
+    <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B76E79"/>
+      <stop offset="100%" stop-color="#E6C3C6"/>
+    </linearGradient>
   </defs>
-  <rect width="400" height="200" fill="url(#dots)"/>
+  <rect width="1200" height="400" fill="url(#bg)" />
+  <g opacity="0.15">
+    <circle cx="200" cy="120" r="90" fill="#1E40AF"/>
+    <circle cx="950" cy="300" r="120" fill="#1E40AF"/>
+    <rect x="500" y="40" width="180" height="180" rx="30" fill="#1E40AF"/>
+  </g>
+  <g>
+    <text x="80" y="170" font-family="Poppins, Arial, sans-serif" font-size="54" font-weight="800" fill="#1E40AF">Cardigan & Sweater</text>
+    <text x="80" y="220" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="600" fill="#B76E79">Look cozy. Feel classy.</text>
+    <rect x="80" y="250" width="260" height="48" rx="12" fill="url(#rg)"/>
+    <text x="110" y="282" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="700" fill="white">Shop Best Sellers</text>
+  </g>
 </svg>

@@ -1,87 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mossewear</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mossewear — Cardigan & Sweater Kekinian</title>
+  <meta name="description" content="Mossewear: Toko cardigan & sweater kekinian. Cozy & classy.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
   <header>
-    <div class="nav container">
-      <img src="assets/img/logo.svg" alt="Mossewear" height="40">
-      <div class="menu">
-        <a href="#produk">Produk</a>
-        <a href="#testimoni">Testimoni</a>
-        <a href="#kontak">Kontak</a>
-      </div>
-      <button class="btn secondary">Keranjang</button>
+    <div class="container nav">
+      <a class="brand" href="#"><img src="assets/img/logo.svg" width="90" height="20" alt="Mossewear logo"> Mossewear</a>
+      <a href="#best">Best Seller</a>
+      <a href="#testi">Testimoni</a>
+      <a href="#feedback">Kritik & Saran</a>
+      <div class="spacer"></div>
+      <button class="btn outline" onclick="document.querySelector('#feedback').scrollIntoView({behavior:'smooth'})">Hubungi Kami</button>
     </div>
   </header>
 
-  <section class="section container" id="produk">
-    <h2>Produk Terlaris</h2>
-    <div class="product-slider">
-      <div class="product-card">
-        <img src="assets/img/products/cardigan-1.svg" alt="Cardigan 1">
-        <h3>Cardigan Aurora</h3>
-        <div class="price">Rp 279.000</div>
-        <button class="btn">Tambah ke Keranjang</button>
+  <main class="container">
+    <section class="hero">
+      <img src="assets/img/hero-pattern.svg" alt="Hero Mossewear">
+    </section>
+
+    <section id="best" class="section">
+      <h2>Best Seller</h2>
+      <p class="muted">Pilihan cardigan & sweater favorit. Maksimal 5 item tampil di slider.</p>
+      <div class="slider" aria-label="Slider produk terlaris">
+        <div class="track"></div>
+        <div class="controls">
+          <button id="prev" aria-label="Sebelumnya">‹</button>
+          <button id="next" aria-label="Berikutnya">›</button>
+        </div>
       </div>
-      <div class="product-card">
-        <img src="assets/img/products/cardigan-2.svg" alt="Cardigan 2">
-        <h3>Cardigan Rose Luxe</h3>
-        <div class="price">Rp 319.000</div>
-        <button class="btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/products/cardigan-3.svg" alt="Cardigan 3">
-        <h3>Cardigan Sky</h3>
-        <div class="price">Rp 299.000</div>
-        <button class="btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/products/cardigan-4.svg" alt="Cardigan 4">
-        <h3>Cardigan Night</h3>
-        <div class="price">Rp 289.000</div>
-        <button class="btn">Tambah ke Keranjang</button>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/products/cardigan-5.svg" alt="Cardigan 5">
-        <h3>Cardigan Light</h3>
-        <div class="price">Rp 269.000</div>
-        <button class="btn">Tambah ke Keranjang</button>
-      </div>
+    </section>
+
+    <section id="testi" class="section">
+      <h2>Testimoni Pelanggan</h2>
+      <div id="testimonials" class="grid" aria-live="polite"></div>
+
+      <h3 style="margin-top:18px">Tulis Testimoni Kamu</h3>
+      <form id="testimonial-form" class="grid" style="grid-template-columns:1fr;" autocomplete="on">
+        <input id="t-name" class="input" name="name" placeholder="Nama (opsional)"/>
+        <textarea id="t-message" class="input" name="message" rows="3" placeholder="Ceritakan pengalaman belanja kamu..." required></textarea>
+        <button class="btn rose" type="submit">Kirim Testimoni</button>
+      </form>
+    </section>
+
+    <section id="feedback" class="section">
+      <h2>Kritik & Saran</h2>
+      <p class="muted">Bantu kami jadi lebih baik lagi 💙</p>
+      <form id="feedback-form" class="grid" style="grid-template-columns:1fr;" autocomplete="on">
+        <input id="f-name" class="input" name="name" placeholder="Nama (opsional)"/>
+        <textarea id="f-message" class="input" name="message" rows="3" placeholder="Tulis kritik / saran di sini..." required></textarea>
+        <button class="btn" type="submit">Kirim via WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="cart-fab">
+    <button id="cart-fab" class="btn rose"><span>🛒</span><span id="cart-count">0</span></button>
+  </div>
+  <div id="cart-panel" class="cart-panel" aria-live="polite">
+    <div class="cart-header">
+      <div>Keranjang</div>
+      <button class="btn outline" onclick="localStorage.removeItem('mossewear_cart_v1'); renderCart()">Kosongkan</button>
     </div>
-  </section>
-
-  <section class="section container" id="testimoni">
-    <h2>Testimoni Pelanggan</h2>
-    <div id="testimonial-list">
-      <div class="testimonial"><strong>Ayu</strong><p>Kualitas bahan sangat bagus, nyaman dipakai!</p></div>
+    <div id="cart-items"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+      <div style="font-weight:800">Subtotal: <span id="cart-subtotal">Rp0</span></div>
+      <button class="btn" onclick="checkout()">Checkout</button>
     </div>
-    <form id="testimonial-form">
-      <input type="text" id="name" placeholder="Nama" required>
-      <textarea id="message" placeholder="Pesan" required></textarea>
-      <button type="submit" class="btn">Kirim Testimoni</button>
-    </form>
-  </section>
+    <p class="muted" style="margin-top:8px">*Checkout akan membuka WhatsApp dengan ringkasan pesanan. Ganti nomor WA tujuan di <code>assets/js/app.js</code>.</p>
+  </div>
 
-  <section class="section container" id="kontak">
-    <h2>Kritik & Saran</h2>
-    <form>
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Kritik atau saran Anda" required></textarea>
-      <button type="submit" class="btn">Kirim</button>
-    </form>
-    <p>Alamat Toko: Jl. grand galaxy park, Malang</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Mossewear. All rights reserved.
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+        <img src="assets/img/logo.svg" width="90" height="20" alt="Mossewear">
+        <span class="muted">© <span id="year"></span> Mossewear</span>
+      </div>
+      <div class="muted">Alamat toko: Jl. grand galaxy park, malang</div>
+    </div>
   </footer>
 
+  <script>document.getElementById('year').textContent=(new Date()).getFullYear();</script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
