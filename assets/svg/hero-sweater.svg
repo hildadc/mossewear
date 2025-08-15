@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <g fill="none" stroke="none">
+    <rect width="600" height="400" fill="none"/>
+    <!-- sweater stylized -->
+    <g transform="translate(120,40)">
+      <path d="M40 20 h160 v40 l20 20 v120 a20 20 0 0 1 -20 20 h-140 a20 20 0 0 1 -20 -20 v-120 l20 -20 z" fill="#fff8ec" stroke="#0f4c81"/>
+      <rect x="80" y="120" width="80" height="120" rx="10" fill="#b76e79" opacity="0.15"/>
+    </g>
+  </g>
+</svg>
