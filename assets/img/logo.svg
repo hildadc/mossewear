@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mossewear Logo">
-  <rect x="0" y="0" width="180" height="40" rx="8" fill="#1e3a8a"/>
-  <text x="90" y="26" font-family="Poppins, Arial, sans-serif" font-size="18" fill="#FFFFF0" text-anchor="middle" letter-spacing="2">MOSSEWEAR</text>
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="180" height="40" rx="8" fill="#1e3a8a"/>
+<text x="90" y="26" font-family="Poppins, Arial, sans-serif" font-size="18" fill="#FFFFF0" text-anchor="middle" letter-spacing="2">MOSSEWEAR</text>
 </svg>
