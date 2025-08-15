@@ -1,139 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mossewear — Cardigan & Sweater</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mossewear — Timeless & Elegant</title>
+  <meta name="description" content="mossewear — clothes store. Elegant, timeless, and comfy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <h1>Mossewear</h1>
-      <p class="tag">Cardigans & Sweaters — Stylish, Comfortable</p>
-    </div>
-    <div class="header-actions">
-      <div class="address">📍 Jl. Grand Galaxy, Bekasi</div>
-      <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
-    </div>
+    <nav class="nav container">
+      <a href="#" class="brand" aria-label="mossewear home">
+        <img src="assets/img/logo.svg" alt="mossewear logo" class="logo">
+        <span>mossewear</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Buka menu">☰</button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kritik-saran">Kritik & Saran</a></li>
+        <li><a href="#alamat">Alamat</a></li>
+      </ul>
+      <button class="cart-button" id="openCart" aria-label="Buka keranjang">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45C7.89 17.37 8.4 18 9.12 18H19v-2H9.42l1-1.8h6.87c.75 0 1.41-.41 1.75-1.05L22 7H6.42l-.7-1.4L5.2 5H7V4z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Timeless. Elegant. <span class="gradient">mossewear</span>.</h1>
+        <p>Koleksi busana sehari-hari yang lembut, nyaman, dan elegan. Dirancang untuk menemanimu di setiap momen.</p>
+        <a href="#produk" class="btn btn-primary">Lihat Produk</a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/img/hero-illustration.svg" alt="Ilustrasi fashion elegan" />
+      </div>
+    </section>
   </header>
 
-  <main class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-left">
-        <h2>Koleksi Musim Ini — Lembut & Modern</h2>
-        <p>Temukan cardigan dan sweater favoritmu dengan warna-warna hangat dan detail premium.</p>
-        <a href="#products" class="btn primary">Belanja Sekarang</a>
+  <main>
+    <!-- PRODUK TERLARIS SLIDER (maks 5) -->
+    <section id="produk" class="container section">
+      <div class="section-head">
+        <h2>Produk Terlaris</h2>
+        <p>Pilihan best-seller kami. Seret atau gunakan panah untuk melihat produk.</p>
       </div>
-      <div class="hero-right">
-        <!-- small product highlights -->
-        <img src="assets/hero-shirt.svg" alt="hero" />
-      </div>
-    </section>
 
-    <!-- Slider produk terlaris -->
-    <section id="products" class="section">
-      <h3>Produk Terlaris</h3>
-      <div class="slider" id="productSlider">
-        <button class="slide-btn prev" aria-label="Previous">‹</button>
-        <div class="slides">
-          <!-- up to 5 product cards -->
-          <div class="product" data-id="p1" data-name="Cardigan Bloom" data-price="199000">
-            <img src="assets/cardigan1.svg" alt="Cardigan Bloom" />
-            <h4>Cardigan Bloom</h4>
-            <p class="price">Rp 199.000</p>
-            <button class="add-cart">Tambahkan ke Keranjang</button>
-          </div>
-          <div class="product" data-id="p2" data-name="Sweater Cozy" data-price="175000">
-            <img src="assets/sweater1.svg" alt="Sweater Cozy" />
-            <h4>Sweater Cozy</h4>
-            <p class="price">Rp 175.000</p>
-            <button class="add-cart">Tambahkan ke Keranjang</button>
-          </div>
-          <div class="product" data-id="p3" data-name="Cardigan Pastel" data-price="189000">
-            <img src="assets/cardigan2.svg" alt="Cardigan Pastel" />
-            <h4>Cardigan Pastel</h4>
-            <p class="price">Rp 189.000</p>
-            <button class="add-cart">Tambahkan ke Keranjang</button>
-          </div>
-          <div class="product" data-id="p4" data-name="Sweater Relax" data-price="165000">
-            <img src="assets/sweater2.svg" alt="Sweater Relax" />
-            <h4>Sweater Relax</h4>
-            <p class="price">Rp 165.000</p>
-            <button class="add-cart">Tambahkan ke Keranjang</button>
-          </div>
-          <div class="product" data-id="p5" data-name="Cardigan Linen" data-price="209000">
-            <img src="assets/cardigan3.svg" alt="Cardigan Linen" />
-            <h4>Cardigan Linen</h4>
-            <p class="price">Rp 209.000</p>
-            <button class="add-cart">Tambahkan ke Keranjang</button>
-          </div>
+      <div class="slider" aria-label="Slider produk terlaris">
+        <button class="slider-control prev" id="sliderPrev" aria-label="Sebelumnya">‹</button>
+        <div class="slider-track" id="sliderTrack">
+          <!-- Item akan di-render oleh JS dari data/products.json (embedded) -->
         </div>
-        <button class="slide-btn next" aria-label="Next">›</button>
+        <button class="slider-control next" id="sliderNext" aria-label="Berikutnya">›</button>
       </div>
     </section>
 
-    <!-- Keranjang & Checkout -->
-    <section class="section">
-      <h3>Keranjang</h3>
-      <div id="cartArea">
-        <p class="muted">Keranjang kosong — tambahkan produk dari bagian "Produk Terlaris".</p>
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="container section">
+      <div class="section-head">
+        <h2>Testimoni Pelanggan</h2>
+        <p>Suara mereka yang sudah jatuh cinta pada mossewear.</p>
       </div>
-      <div class="cart-actions">
-        <button id="checkoutBtn" class="btn primary" disabled>Checkout</button>
-        <button id="clearCart" class="btn">Kosongkan Keranjang</button>
+      <ul class="testi-list" id="testiList" aria-live="polite"></ul>
+
+      <!-- INPUT TESTIMONI PELANGGAN -->
+      <div class="card form-card">
+        <h3>Tulis Testimoni Anda</h3>
+        <form id="testiForm">
+          <div class="form-row">
+            <label for="testiName">Nama</label>
+            <input type="text" id="testiName" name="name" placeholder="Nama Anda" required>
+          </div>
+          <div class="form-row">
+            <label for="testiRating">Rating</label>
+            <select id="testiRating" name="rating" required>
+              <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+              <option value="4">⭐️⭐️⭐️⭐️</option>
+              <option value="3">⭐️⭐️⭐️</option>
+              <option value="2">⭐️⭐️</option>
+              <option value="1">⭐️</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="testiText">Testimoni</label>
+            <textarea id="testiText" name="text" rows="3" placeholder="Ceritakan pengalaman Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Testimoni</button>
+        </form>
       </div>
     </section>
 
-    <!-- Testimoni -->
-    <section class="section testimonials">
-      <h3>Testimoni Pelanggan</h3>
-      <div id="testiList" class="testi-list">
-        <!-- sample testimonials -->
-        <blockquote class="testi">
-          <p>"Cardigan-nya nyaman banget, warna sesuai!"</p>
-          <cite>— Rina</cite>
-        </blockquote>
-        <blockquote class="testi">
-          <p>"Proses pengiriman cepat, bahan berkualitas."</p>
-          <cite>— Dimas</cite>
-        </blockquote>
+    <!-- KRITIK & SARAN -->
+    <section id="kritik-saran" class="container section">
+      <div class="section-head">
+        <h2>Kritik & Saran</h2>
+        <p>Bantu kami menjadi lebih baik. Masukan Anda akan tersimpan di perangkat ini (localStorage).</p>
       </div>
-
-      <form id="testiForm" class="testi-form">
-        <h4>Tambah Testimoni</h4>
-        <input type="text" id="nameInput" placeholder="Nama (mis. Siti)" required />
-        <textarea id="messageInput" placeholder="Tulis pengalamanmu..." rows="3" required></textarea>
-        <button type="submit" class="btn">Kirim Testimoni</button>
-      </form>
-    </section>
-
-    <!-- Kritik & Saran -->
-    <section class="section feedback">
-      <h3>Kritik & Saran</h3>
-      <p>Silakan beri masukan agar Mossewear bisa terus memperbaiki produk dan layanan.</p>
-      <ul>
-        <li>Ukuran lebih lengkap (XS — XXL)</li>
-        <li>Variasi warna lebih banyak</li>
-        <li>Paket hemat untuk pembelian 3+ item</li>
-      </ul>
+      <div class="grid-2">
+        <div class="card form-card">
+          <h3>Kirim Masukan</h3>
+          <form id="saranForm">
+            <div class="form-row">
+              <label for="saranNama">Nama</label>
+              <input type="text" id="saranNama" placeholder="Nama (opsional)">
+            </div>
+            <div class="form-row">
+              <label for="saranEmail">Email</label>
+              <input type="email" id="saranEmail" placeholder="Email (opsional)">
+            </div>
+            <div class="form-row">
+              <label for="saranIsi">Pesan</label>
+              <textarea id="saranIsi" rows="4" placeholder="Tulis kritik/saran Anda..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Simpan Masukan</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Kotak Masukan</h3>
+          <ul id="saranList" class="saran-list" aria-live="polite"></ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© Mossewear — Jl. Grand Galaxy, Bekasi</p>
+  <!-- KERANJANG (DRAWER) -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle" role="dialog">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3 id="cartTitle">Keranjang</h3>
+        <button class="icon-btn" id="closeCart" aria-label="Tutup keranjang">✕</button>
+      </div>
+      <ul id="cartItems" class="cart-items"></ul>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">Rp0</strong>
+        </div>
+        <div class="cart-actions">
+          <button class="btn btn-secondary" id="clearCart">Kosongkan</button>
+          <a class="btn btn-primary" href="checkout.html" id="checkoutBtn">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <div class="cart-backdrop" id="cartBackdrop" tabindex="-1" aria-hidden="true"></div>
+  </aside>
+
+  <footer class="site-footer" id="alamat">
+    <div class="container foot-grid">
+      <div>
+        <h4>mossewear</h4>
+        <p>Timeless & Elegant Wear</p>
+      </div>
+      <div>
+        <h4>Alamat Toko</h4>
+        <address>Jl. Dipenegori 74, Bogor</address>
+      </div>
+      <div>
+        <h4>Ikuti Kami</h4>
+        <ul class="socials">
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="TikTok">TikTok</a></li>
+          <li><a href="#" aria-label="Shopee">Shopee</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <small>© <span id="year"></span> mossewear. All rights reserved.</small>
+    </div>
   </footer>
 
-  <template id="cartItemTpl">
-    <div class="cart-item">
-      <div class="cart-name"></div>
-      <div class="cart-qty">x<span class="qty">1</span></div>
-      <div class="cart-price"></div>
-      <button class="remove-item" title="Hapus">✕</button>
-    </div>
-  </template>
-
-  <script src="script.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — mossewear</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <nav class="nav container">
+      <a href="index.html" class="brand"><img src="assets/img/logo.svg" class="logo" alt=""> <span>mossewear</span></a>
+      <a href="index.html#produk" class="btn btn-secondary">Kembali ke Toko</a>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Checkout</h1>
+    <p>Ini adalah halaman demo checkout statis untuk GitHub Pages. Ringkasan keranjang Anda ada di bawah.</p>
+
+    <div class="card">
+      <h3>Ringkasan Pesanan</h3>
+      <ul id="checkoutItems" class="cart-items"></ul>
+      <div class="cart-total-line">
+        <span>Total</span>
+        <strong id="checkoutTotal">Rp0</strong>
+      </div>
+      <p class="muted">* Catatan: Karena ini situs statis, tombol “Bayar” hanya menampilkan simulasi. Anda bisa integrasikan ke Midtrans/Xendit/Tripay nantinya.</p>
+      <button id="payNow" class="btn btn-primary">Bayar Sekarang</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-bottom">
+      <small>© <span id="year"></span> mossewear.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>
