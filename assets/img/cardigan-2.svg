@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cardigan Illustration">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b76e79"/>
+      <stop offset="100%" stop-color="#d6a2ac"/>
+    </linearGradient>
+  </defs>
+  <!-- Body -->
+  <path d="M128 160c24-32 80-48 128-48s104 16 128 48l16 224c-48 32-112 48-144 48s-96-16-144-48l16-224z" fill="url(#g)" stroke="#1f2937" stroke-width="8" />
+  <!-- Sleeves -->
+  <path d="M128 160c-32 8-56 40-64 72-8 32-8 88-8 128 16 8 48 16 72 16l16-216z" fill="#b76e79" opacity="0.9" stroke="#1f2937" stroke-width="8"/>
+  <path d="M384 160c32 8 56 40 64 72 8 32 8 88 8 128-16 8-48 16-72 16l-16-216z" fill="#b76e79" opacity="0.9" stroke="#1f2937" stroke-width="8"/>
+  <!-- Opening / buttons -->
+  <rect x="252" y="140" width="8" height="280" fill="#111827" opacity="0.9"/>
+  <circle cx="256" cy="200" r="6" fill="#f9fafb"/>
+  <circle cx="256" cy="240" r="6" fill="#f9fafb"/>
+  <circle cx="256" cy="280" r="6" fill="#f9fafb"/>
+  <circle cx="256" cy="320" r="6" fill="#f9fafb"/>
+</svg>
