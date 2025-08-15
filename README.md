@@ -1,11 +1,18 @@
-Mossewear — Static demo site
---------------------------------
-Folder structure:
+# Mossewear Static Website
+
+Files:
 - index.html
-- css/styles.css
-- js/app.js
-- assets/svg/* (logo, hero, product svgs)
+- styles.css
+- script.js
+- assets/*.svg
+
+Features:
+- Slider produk terlaris (maks 5)
+- Tambah ke keranjang, melihat keranjang, checkout (simulasi)
+- Testimoni pelanggan dan input testimoni
+- Alamat toko: Jl. Grand Galaxy, Bekasi
+- Color scheme: Ivory, Pink, Blue
 
 How to use:
-- Unzip and host on GitHub Pages (push to repository's main branch or gh-pages).
-- This is a static demo: checkout is simulated and data (testimoni, cart, feedback) is stored in browser localStorage.
+1. Extract the files and open index.html in browser (or host via GitHub Pages).
+2. To deploy on GitHub Pages, push the contents to a `main` branch and enable Pages (root).
